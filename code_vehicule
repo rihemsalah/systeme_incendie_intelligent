@@ -1,0 +1,77 @@
+const int leftSensor = A0; // Pin for left sensor
+const int rightSensor = A1; // Pin for right sensor
+
+//configuration de L298N (sans vitesse
+int in1 = 1; 
+int in2 = 2; 
+int in3 = 3;
+int in4 = 4; 
+void setup() {
+  // Set sensor and motor pins as inputs and outputs
+  pinMode(leftSensor, INPUT);
+  pinMode(rightSensor, INPUT);
+  pinMode(in1, OUTPUT);
+  pinMode(in2, OUTPUT);
+  pinMode(in3, OUTPUT);
+  pinMode(in4, OUTPUT);
+}
+
+// déclaration d'une fonction de marche avant
+void avant(){
+digitalWrite(in1, 1);
+digitalWrite(in2, 0);
+digitalWrite(in3, 1);
+digitalWrite(in4, 0);
+}
+
+
+// déclaration d'une fonction depour tourner à gauche
+void gauche(){
+digitalWrite(in1, 1);
+digitalWrite(in2, 0);
+digitalWrite(in3, 0);
+digitalWrite(in4, 0);
+}
+// déclaration d'une fonction depour tourner à droite
+void droite(){
+digitalWrite(in1, 0);
+digitalWrite(in2, 0);
+digitalWrite(in3, 1);
+digitalWrite(in4, 0);
+}
+
+// déclaration d'une fonction depour tourner à gauche
+void stop(){
+digitalWrite(in1, 0);
+digitalWrite(in2, 0);
+digitalWrite(in3, 0);
+digitalWrite(in4, 0);
+}
+
+void loop() {
+  // Read values from sensors
+  int leftSensorValue = digitalRead(leftSensor);
+  int rightSensorValue = digitalRead(rightSensor);
+/*
+  // If both sensors are on black (line), move forward
+  if (leftSensorValue == 1 && rightSensorValue ==1) {
+avant();
+  }
+
+  // If left sensor is on black (line) and right sensor is on white (background), turn left
+  else if (leftSensorValue ==1 && rightSensorValue ==0) {
+gauche();
+  }
+
+  // If right sensor is on black (line) and left sensor is on white (background), turn right
+  else if (rightSensorValue == 0 && leftSensorValue == 1 ){
+droite();
+  }
+
+  // If both sensors are on white (background), stop
+  else {
+ stop();
+  }*/
+  avant();
+
+}
