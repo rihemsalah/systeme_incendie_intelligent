@@ -1,11 +1,9 @@
 # systeme_incendie_intelligent
 
-# Diatech
-
 This projet is developed during Labs of the subject IoT Architecture
 
 By:
-Mohamed slimen
+Rihem salah and Mohamed gassoumi
 Under-graduated students, 
 Embadded system and IoT Bachelors 
 
@@ -27,9 +25,10 @@ An Internet of Things (IoT) system for fire detection is a network of devices th
 The objective of an IoT system for fire detection is to quickly and accurately detect the presence of fire and take appropriate actions to alert the appropriate authorities or individuals, and to mitigate the damage caused by the fire. This can be achieved by using sensors that are specifically designed to detect the presence of fire, such as temperature sensors, smoke detectors, or infrared sensors. The data from these sensors can be processed and analyzed by the central hub or gateway, which can then trigger the appropriate response based on the severity and location of the fire. An IoT system for fire detection can help to reduce the risk of injury or damage caused by fires by enabling faster and more efficient responses.
 
 <h3>List of devices:</h3>
-Raspberry pi 4<br>
-esp8266<br>
-Max30205<br>
+arduino<br>
+kit vehicule<br>
+capteur flamme<br>
+capteur gaz<br>
 
 
 
